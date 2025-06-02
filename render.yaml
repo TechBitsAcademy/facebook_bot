@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: facebook-groq-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: FACEBOOK_PAGE_ACCESS_TOKEN
+        value: YOUR_PAGE_ACCESS_TOKEN
+      - key: FACEBOOK_VERIFY_TOKEN
+        value: YOUR_VERIFY_TOKEN
+      - key: GROQ_API_KEY
+        value: YOUR_GROQ_API_KEY
